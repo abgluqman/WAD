@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Menu Management</title>
+    <link rel="stylesheet" href="adminMenuManagement.css">
+</head>
+<body>
+    <header>
+        <div class="logo-placeholder">
+            <img src="foodpic/logo.png" alt="">
+        </div>
+
+        <nav>
+            <a href="adminDashboard.html">DashBoard</a>
+            <a href="adminOrderManagement.html">Order Management</a>
+            <a href="adminViewOrder.html">Order View</a>
+            <a href="adminViewMember.html">View Members</a>
+        </nav>
+
+        <div class="button-container">
+            <button class="logout-button" onclick="navigateTo('adminLogin.html')">Log Out</button>
+        </div>
+        
+    </header>
+
+    <main>
+        <h1>Menu Management</h1>
+        <div class="category-bar">
+            <button class="category-btn active" onclick="switchCategory('Foods')">Foods</button>
+            <button class="category-btn" onclick="switchCategory('Drinks')">Drinks</button>
+        </div>
+
+        <div id="menu-container"></div>
+
+        <section class="form-section">
+            <h2>Add/Edit Menu Item</h2>
+            <form id="menu-form">
+                <input type="text" id="food-name" placeholder="Item Name" required />
+                <input type="number" id="food-price" placeholder="Price (RM)" step="0.01" required />
+                <input type="file" id="menu-image" accept="image/*" required>
+                <select id="food-category" required>
+                    <option value="Foods">Foods</option>
+                    <option value="Drinks">Drinks</option>
+                </select>
+                <button type="submit">Save</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Menu Management System</p>
+    </footer>
+
+    <script src="adminMenuManagement.js"></script>
+</body>
+</html>

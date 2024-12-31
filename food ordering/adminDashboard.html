@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="adminDashboard.css">
+</head>
+<body>
+    <header>
+        <div class="logo-placeholder">
+            <img src="foodpic/logo.png" alt="">
+        </div>
+        <div class="page-name">ADMIN DASHBOARD</div>
+        <div class="button-container">
+            <button class="logout-button" onclick="navigateTo('adminLogin.html')">Log Out</button>
+        </div>
+    </header>
+
+    <main>
+        <h1>Welcome to the Admin Dashboard</h1>
+        <div class="button-container">
+            <button class="nav-button" onclick="navigateTo('adminOrderManagement.html')">Order Management</button>
+            <button class="nav-button" onclick="navigateTo('adminMenuManagement.html')">Menu Management</button>
+            <button class="nav-button" onclick="navigateTo('adminViewOrder.html')">View Orders</button>
+            <button class="nav-button" onclick="navigateTo('adminViewMember.html')">View Members</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Admin Dashboard</p>
+    </footer>
+
+    <script src="adminDashboard.js"></script>
+</body>
+</html>

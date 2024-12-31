@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Order Management</title>
+  <link rel="stylesheet" href="adminOrderManagement.css">
+</head>
+<body>
+    <header>
+        <div class="logo-placeholder">
+            <img src="foodpic/logo.png" alt="">
+        </div>
+      
+        <nav>
+            <a href="adminDashboard.html">DashBoard</a>
+            <a href="adminMenuManagement.html">Menu Management</a>
+            <a href="adminViewOrder.html">Order View</a>
+            <a href="adminViewMember.html">View Members</a>
+        </nav>
+
+        <div class="button-container">
+            <button class="logout-button" onclick="navigateTo('adminLogin.html')">Log Out</button>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="order-management">
+        <h1>Order Management</h1>
+        <div class="order-tabs">
+          <button onclick="filterOrders('#0001')">#0001</button>
+          <button onclick="filterOrders('#0002')">#0002</button>
+          <button onclick="filterOrders('#0003')">#0003</button>
+          <button onclick="filterOrders('#0004')">#0004</button>
+          <button onclick="filterOrders('all')">Show All</button>
+        </div>
+
+        <div class="order-list" id="order-list">
+          <!-- Order 1 -->
+            <div class="order-card" data-id="#0001">
+            <h2>ORDER#0001</h2>
+            <p>08 Feb 2024, 12:00 PM</p>
+            <div class="order-items">
+                <div class="item">
+                    <img src="foodpic/meegoreng.jpg" alt="Food">
+                    <div class="item-info">
+                    <p class="name">Mee Goreng</p>
+                    <p class="price">RM 5.00</p>
+                    <p class="qty">QTY: 1</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="foodpic/TehTarik.jpeg" alt="Food">
+                    <div class="item-info">
+                        <p class="name">Teh Tarik Panas</p>
+                        <p class="price">RM 3.00</p>
+                        <p class="qty">QTY: 1</p>
+                    </div>
+                </div>
+            </div>
+            <div class="order-actions">
+              <button class="reject" onclick="updateStatus(this, 'Rejected')">REJECT</button>
+              <button class="complete" onclick="updateStatus(this, 'Complete')">COMPLETE</button>
+            </div>
+            </div>
+
+          <!-- Similar structure for other orders -->
+            <div class="order-card" data-id="#0002">
+            <h2>ORDER#0002</h2>
+            <p>08 Feb 2024, 12:00 PM</p>
+            <div class="order-items">
+                <div class="item">
+                    <img src="foodpic/nasi lemak.jpg" alt="Food">
+                    <div class="item-info">
+                        <p class="name">Nasi Lemak</p>
+                        <p class="price">RM 5.00</p>
+                        <p class="qty">QTY: 1</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="foodpic/aislemontea.jpeg" alt="Food">
+                    <div class="item-info">
+                        <p class="name">Teh Ais Limau</p>
+                        <p class="price">RM 3.00</p>
+                        <p class="qty">QTY: 1</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="order-actions">
+              <button class="reject" onclick="updateStatus(this, 'Rejected')">REJECT</button>
+              <button class="complete" onclick="updateStatus(this, 'Complete')">COMPLETE</button>
+            </div>
+            </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="adminOrderManagement.js"></script>
+</body>
+</html>

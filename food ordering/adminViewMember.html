@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member List</title>
+    <link rel="stylesheet" href="adminViewOrder.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-placeholder">
+            <img src="foodpic/logo.png" alt="">
+        </div>
+
+        <nav>
+            <a href="adminDashboard.html">DashBoard</a>
+            <a href="adminOrderManagement.html">Order Management</a>
+            <a href="adminMenuManagement.html">Menu Management</a>
+            <a href="adminViewOrder.html">Order View</a>
+        </nav>
+
+        <div class="button-container">
+            <button class="logout-button" onclick="navigateTo('adminLogin.html')">Log Out</button>
+        </div>
+        
+    </header>
+
+    <main>
+        <h1>Member List</h1>
+        <table class="member-table">
+            <thead>
+                <tr>
+                    <th>Member ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Registration Date</th>
+                    <th>Account Status</th>
+                </tr>
+            </thead>
+            <tbody id="member-list">
+                <!-- Members will be dynamically populated here -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Order Management System</p>
+    </footer>
+
+    <script src="adminViewMember.js"></script>
+</body>
+</html>

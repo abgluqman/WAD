@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <link rel="stylesheet" href="adminViewOrder.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-placeholder">
+            <img src="foodpic/logo.png" alt="">
+        </div>
+
+        <nav>
+            <a href="adminDashboard.html">DashBoard</a>
+            <a href="adminOrderManagement.html">Order Management</a>
+            <a href="adminMenuManagement.html">Menu Management</a>
+            <a href="adminViewMember.html">View Members</a>
+        </nav>
+
+        <div class="button-container">
+            <button class="logout-button" onclick="navigateTo('adminLogin.html')">Log Out</button>
+        </div>
+        
+    </header>
+
+    <main>
+        <h1>Order Summary</h1>
+        <table class="order-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Date</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="order-list">
+                <!-- Orders will be dynamically populated here -->
+            </tbody>
+        </table>
+    </main>
+
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Order Details</h2>
+            <div id="order-details"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Order Management System</p>
+    </footer>
+
+    <script src="adminViewOrder.js"></script>
+</body>
+</html>

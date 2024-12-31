@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Rafflesia College</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="styles.js" defer></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-item">
+            <a href="index.html" class="nav-link">HOME</a>
+        </div>
+        <div class="nav-item">ABOUT US</div>
+        <div class="nav-item">
+            <a href="login.html" class="nav-link">LOGIN</a>
+        </div>
+        <div class="nav-item">
+            <a href="#" class="nav-link" id="cart-button">CART (<span id="cart-count">0</span>)</a>
+            <div id="cart-dropdown" class="hidden cart-dropdown">
+                <p id="empty-cart-message">No items in the cart.</p>
+                <ul id="cart-items"></ul>
+                <p class="total-price" id="total-price">Total: RM 0.00</p>
+                <button id="checkout-button" class="checkout-button">Checkout</button>
+            </div>
+        </div>
+        <div class="nav-item">
+            <form class="search-form" action="#" method="GET">
+                <input type="text" name="search" class="search-box" placeholder="Search...">
+                <button type="submit" class="search-button">Search</button>
+            </form>
+        </div>
+        <div class="nav-item account-button">
+            <a href="profileEdit.html" class="nav-link">ACCOUNT</a>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="welcome-section">
+            <div class="welcome-text">
+                <h1>Welcome To Cafe Rafflesia College</h1>
+            </div>
+            <div class="logo-placeholder">
+                <img src="foodpic/logo.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <header>
+        <div class="about-content">
+            <h2>About Us</h2>
+            <div class="about-details">
+                <p>Café Rafflesia College is a food and catering service located in Rafflesia College UNIMAS, 
+                    Kota Samarahan. The café offers meal services for the Rafflesia College students, with 
+                    reasonable prices and delectable dishes. The café is strategically located in the center of the 
+                    college area, and open spaces where students can enjoy their meals comfortably on windy days.</p>
+            </div>
+        </div>
+    </header>
+
+    
+    <!--Food Slideshow section-->
+    <section class="food-part">
+        <div class="food-part2">
+            <div class="description1">
+                <h2>Foods</h2>
+            </div>
+            <div class="food-image">
+                <img id="slideshow1" src = "foodpic/genfood.jpeg" alt="Food 1">
+                <script src="styles.js"></script>
+            </div>
+        </div>
+    </section>
+
+ <!--Drink Slideshow Section-->
+ <section class="drink-part">
+    <div class="drink-part2">
+        <div class="description2">
+            <h2>Drinks</h2>
+        </div>
+        <div class="drink-image">
+            <img id="slideshow2" src = "foodpic/drinkslide.jpeg" alt="Drink 1">
+            <script src="styles.js"></script>
+        </div>
+    </div>
+</section>
+
+<!--Filtering Section (Food, Drinks or ALL)-->
+    <div class="category-navbar">
+        <button class="category-button" onclick="showCategory('food-section')">Foods</button>
+        <button class="category-button" onclick="showCategory('drink-section')">Drinks</button>
+        <button class="category-button" onclick="showCategory('all')">All</button>
+    </div>
+    
+    <!-- Foods Section -->
+    <div id="food-section" class="category-section">
+        <h1>Foods</h1>
+        <div class="food-gallery">
+            <div class="food-item">
+                <img src="foodpic/tomyam.jpeg" alt="Sup Tomyam Campur">
+                <h3>Sup Tomyam Campur</h3>
+                <p>RM 7.00</p>
+                <button class="add-to-cart" data-name="Sup Tomyam Campur" data-price="7.00">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="foodpic/nasi lemak.jpg" alt="Nasi Lemak">
+                <h3>Nasi Lemak</h3>
+                <p>RM 5.00</p>
+                <button class="add-to-cart" data-name="Nasi Lemak" data-price="5.00">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="foodpic/sup.jpeg" alt="Sup Ayam">
+                <h3>Sup Ayam</h3>
+                <p>RM 6.00</p>
+                <button class="add-to-cart" data-name="Sup Ayam" data-price="6.00">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="foodpic/nasigoreng.jpg" alt="Nasi Goreng">
+                <h3>Nasi Goreng</h3>
+                <p>RM 4.00</p>
+                <button class="add-to-cart" data-name="Nasi Goreng" data-price="4.00">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="foodpic/meegoreng.jpg" alt="Mee Goreng">
+                <h3>Mee Goreng</h3>
+                <p>RM 5.00</p>
+                <button class="add-to-cart" data-name="Mee Goreng" data-price="5.00">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="foodpic/kueyteowgoreng.jpeg" alt="Kuey Teow Goreng">
+                <h3>Kuey Teow Goreng</h3>
+                <p>RM 5.00</p>
+                <button class="add-to-cart" data-name="Kuey Teow Goreng" data-price="5.00">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="foodpic/maggiegoreng.jpeg" alt="Maggie Goreng">
+                <h3>Maggie Goreng</h3>
+                <p>RM 4.00</p>
+                <button class="add-to-cart" data-name="Maggie Goreng" data-price="4.00">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="foodpic/meesup.jpeg" alt="Mee Sup">
+                <h3>Mee Sup</h3>
+                <p>RM 6.00</p>
+                <button class="add-to-cart" data-name="Mee Sup" data-price="6.00">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="foodpic/nasigorengpattaya.jpeg" alt="Nasi Goreng Pattaya">
+                <h3>Nasi Goreng Pattaya</h3>
+                <p>RM 5.00</p>
+                <button class="add-to-cart" data-name="Nasi Goreng Pattaya" data-price="5.00">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="foodpic/nasigorengayam.jpeg" alt="Nasi Goreng Ayam">
+                <h3>Nasi Goreng Ayam</h3>
+                <p>RM 5.00</p>
+                <button class="add-to-cart" data-name="Nasi Goreng Ayam" data-price="5.00">Add to Cart</button>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Drinks Section -->
+    <div id="drink-section" class="category-section" style="display: none;">
+        <h1>Drinks</h1>
+        <div class="drink-gallery">
+            <div class="drink-item">
+                <img src="foodpic/TehO.jpeg" alt="Teh O Ais">
+                <h3>Teh O Ais</h3>
+                <p>RM 1.50</p>
+                <button class="add-to-cart" data-name="Teh O Ais" data-price="1.50">Add to Cart</button>
+            </div>
+            <div class="drink-item">
+                <img src="foodpic/KopiO.jpeg" alt="Kopi O Ais">
+                <h3>Kopi O Ais</h3>
+                <p>RM 1.50</p>
+                <button class="add-to-cart" data-name="Kopi O Ais" data-price="1.50">Add to Cart</button>
+            </div>
+            <div class="drink-item">
+                <img src="foodpic/TehC.jpeg" alt="Teh C Ais">
+                <h3>Teh C Ais</h3>
+                <p>RM 3.50</p>
+                <button class="add-to-cart" data-name="Teh C Ais" data-price="3.50">Add to Cart</button>
+            </div>
+            <div class="drink-item">
+                <img src="foodpic/TehTarik.jpeg" alt="Teh Tarik Panas">
+                <h3>Teh Tarik Panas</h3>
+                <p>RM 1.50</p>
+                <button class="add-to-cart" data-name="Teh Tarik Panas" data-price="1.50">Add to Cart</button>
+            </div>
+            <div class="drink-item">
+                <img src="foodpic/greenteasusu.jpeg" alt="Green Tea Susu">
+                <h3>Green Tea Susu</h3>
+                <p>RM 4.00</p>
+                <button class="add-to-cart" data-name="Green Tea Susu" data-price="4.00">Add to Cart</button>
+            </div>
+            <div class="drink-item">
+                <img src="foodpic/aislemontea.jpeg" alt="Teh Ais Limau">
+                <h3>Teh Ais Limau</h3>
+                <p>RM 3.00</p>
+                <button class="add-to-cart" data-name="Teh Ais Limau" data-price="3.00">Add to Cart</button>
+            </div>
+            <div class="drink-item">
+                <img src="foodpic/airbandung.jpeg" alt="Bandung Ais">
+                <h3>Bandung Ais</h3>
+                <p>RM 3.00</p>
+                <button class="add-to-cart" data-name="Bandung Ais" data-price="3.00">Add to Cart</button>
+            </div>
+            <div class="drink-item">
+                <img src="foodpic/hotlemon.jpeg" alt="Lemon Panas">
+                <h3>Lemon Panas</h3>
+                <p>RM 2.50</p>
+                <button class="add-to-cart" data-name="Lemon Panas" data-price="2.50">Add to Cart</button>
+            </div>
+            <div class="drink-item">
+                <img src="foodpic/justembikai.jpeg" alt="Jus Tembikai">
+                <h3>Jus Tembikai</h3>
+                <p>RM 4.00</p>
+                <button class="add-to-cart" data-name="Jus Tembikai" data-price="4.00">Add to Cart</button>
+            </div>
+            <div class="drink-item">
+                <img src="foodpic/laicisusu.jpeg" alt="Laici Susu">
+                <h3>Laici Susu</h3>
+                <p>RM 4.00</p>
+                <button class="add-to-cart" data-name="Laici Susu" data-price="4.00">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+     <!-- Footer Section -->
+     <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Cafe Rafflesia. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="styles.js" defer></script>
+</body>
+</html>
+
+
+
